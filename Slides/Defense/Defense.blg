@@ -1,0 +1,52 @@
+This is BibTeX, Version 0.99d (TeX Live 2015/Arch Linux)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: Defense.aux
+The style file: apalike.bst
+Database file #1: biblio.bib
+Warning--string name "aamas-11" is undefined
+--line 299 of file biblio.bib
+Warning--can't use both author and editor fields in Cho2008
+Warning--can't use both author and editor fields in Miller2015
+Warning--empty booktitle in tsai2011
+You've used 13 entries,
+            1935 wiz_defined-function locations,
+            552 strings with 6865 characters,
+and the built_in function-call counts, 5425 in all, are:
+= -- 523
+> -- 269
+< -- 9
++ -- 100
+- -- 94
+* -- 446
+:= -- 958
+add.period$ -- 40
+call.type$ -- 13
+change.case$ -- 111
+chr.to.int$ -- 11
+cite$ -- 16
+duplicate$ -- 200
+empty$ -- 340
+format.name$ -- 107
+if$ -- 1051
+int.to.chr$ -- 3
+int.to.str$ -- 0
+missing$ -- 11
+newline$ -- 68
+num.names$ -- 39
+pop$ -- 112
+preamble$ -- 1
+purify$ -- 112
+quote$ -- 0
+skip$ -- 149
+stack$ -- 0
+substring$ -- 317
+swap$ -- 35
+text.length$ -- 4
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 72
+warning$ -- 3
+while$ -- 41
+width$ -- 0
+write$ -- 170
+(There were 4 warnings)

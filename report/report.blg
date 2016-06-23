@@ -1,0 +1,51 @@
+This is BibTeX, Version 0.99d (TeX Live 2015/Arch Linux)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: report.aux
+The style file: plain.bst
+Database file #1: bibli.bib
+Warning--to sort, need author or key in witness
+Warning--to sort, need author or key in stats2009
+Warning--empty booktitle in adam2016
+Warning--empty booktitle in adam2015-2
+You've used 28 entries,
+            2118 wiz_defined-function locations,
+            666 strings with 9422 characters,
+and the built_in function-call counts, 8762 in all, are:
+= -- 855
+> -- 410
+< -- 6
++ -- 170
+- -- 136
+* -- 584
+:= -- 1450
+add.period$ -- 87
+call.type$ -- 28
+change.case$ -- 152
+chr.to.int$ -- 0
+cite$ -- 32
+duplicate$ -- 330
+empty$ -- 717
+format.name$ -- 136
+if$ -- 1839
+int.to.chr$ -- 0
+int.to.str$ -- 28
+missing$ -- 22
+newline$ -- 144
+num.names$ -- 50
+pop$ -- 188
+preamble$ -- 1
+purify$ -- 125
+quote$ -- 0
+skip$ -- 221
+stack$ -- 0
+substring$ -- 468
+swap$ -- 57
+text.length$ -- 6
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 105
+warning$ -- 4
+while$ -- 80
+width$ -- 30
+write$ -- 301
+(There were 4 warnings)

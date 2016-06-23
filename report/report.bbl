@@ -1,0 +1,177 @@
+\begin{thebibliography}{10}
+
+\bibitem{witness}
+Witness statement.
+\newblock http://vol4.royalcommission.vic.gov.au/index03a1.html?pid=111.
+
+\bibitem{stats2009}
+The lessons learnt.
+\newblock
+  http://www.royalcommission.vic.gov.au/Finaldocuments/volume-1/PF/VBRC\_Vol1\_Chapter21\_PF.pdf,
+  2009.
+
+\bibitem{adam2015}
+Carole Adam, Elise Beck, and Julie Dugdale.
+\newblock {\em {Information Systems for Crisis Response and Management in
+  Mediterranean Countries: Second International Conference, ISCRAM-med 2015,
+  Tunis, Tunisia, October 28-30, 2015, Proceedings}}, chapter Modelling the
+  Tactical Behaviour of the Australian Population in a Bushfire, pages 53--64.
+\newblock Springer International Publishing, 2015.
+
+\bibitem{adam2016}
+Carole Adam, Geoffrey Danet, John Thangarajah, and Julie Dugdale.
+\newblock Bdi modelling and simulation of human behaviours in bushfires
+  "submitted".
+\newblock 2016.
+
+\bibitem{adam2015-2}
+Carole Adam and Benoit Gaudou.
+\newblock Mod\'{e}lisation de comportements humains en situation de crise \`{a}
+  partir d{\rq}entretiens : application aux incendies de for\^{e}t de melbourne
+  (cnia).
+\newblock July 2016.
+
+\bibitem{rhodes2014}
+Rhodes Alan.
+\newblock Why don{\rq}t they do what we think they should?
+\newblock In {\em AFAC}. Emergency Management Victoria, 2014.
+
+\bibitem{caillou2015}
+Philippe Caillou, Benoit Gaudou, Arnaud Grignard, Chi~Quang Truong, and Patrick
+  Taillandier.
+\newblock {A Simple-to-use BDI architecture for Agent-based Modeling and
+  Simulation}.
+\newblock In {\em {The Eleventh Conference of the European Social Simulation
+  Association (ESSA 2015)}}, Groningen, Netherlands, September 2015.
+
+\bibitem{evertsz2015}
+Rick Evertsz, John Thangarajah, Nitin Yadav, and Thanh Ly.
+\newblock A framework for modelling tactical decision-making in autonomous
+  systems.
+\newblock {\em Journal of Systems and Software}, 110:222--238, 2015.
+
+\bibitem{exell}
+Sue Exell.
+\newblock Witness statement.
+\newblock http://vol4.royalcommission.vic.gov.au/index03a1.html?pid=111.
+
+\bibitem{gamawebsite}
+GAMA.
+\newblock Gis \& agent-based modelling architecture.
+\newblock http://gama-platform.org.
+
+\bibitem{georgeff1999}
+Michael Georgeff, Barney Pell, Martha Pollack, Milind Tambe, and Michael
+  Wooldridge.
+\newblock {\em {Intelligent Agents V: Agents Theories, Architectures, and
+  Languages: 5th International Workshop, ATAL'98 Paris, France, July 4--7, 1998
+  Proceedings}}, chapter The Belief-Desire-Intention Model of Agency, pages
+  1--10.
+\newblock Springer Berlin Heidelberg, Berlin, Heidelberg, 1999.
+
+\bibitem{greengard1987}
+L~Greengard and V~Rokhlin.
+\newblock {A fast algorithm for particle simulations}.
+\newblock {\em Journal of Computational Physics}, 73(2):325--348, 1987.
+
+\bibitem{helbing2000}
+Dirk Helbing, Illes Farkas, and Tamas Vicsek.
+\newblock {Simulating dynamical features of escape panic}.
+\newblock {\em Nature}, 407(6803):487--490, September 2000.
+
+\bibitem{mu2013}
+Mu~H.L., Wang J.H., Mao Z.L., Sun J.H., Lo~S.M., and Wang Q.S.
+\newblock Pre-evacuation human reactions in fires: An attribution analysis
+  considering psychological process.
+\newblock {\em Procedia Engineering}, 52:290--296, 2013.
+\newblock 2012 International Conference on Performance-based Fire and Fire
+  Protection Engineering.
+
+\bibitem{ingrand1992}
+Francois~F. Ingrand, Michael~P. Georgeff, and Anand~S. Rao.
+\newblock An architecture for real-time reasoning and system control.
+\newblock {\em IEEE Expert: Intelligent Systems and Their Applications},
+  7(6):34--44, December 1992.
+
+\bibitem{kinateder2014}
+Max~T. Kinateder, Erica~D. Kuligowski, Paul~A. Reneke, and Richard~D. Peacock.
+\newblock {A Review of Risk Perception in Building Fire Evacuation}.
+\newblock Technical report, National Institute of Standards and Technology,
+  September 2014.
+\newblock NIST Technical Note 1840.
+
+\bibitem{kuligowski2008}
+Erica~D. Kuligowski.
+\newblock Modeling human behavior during building fires.
+\newblock Technical report, National Institute of Standards and Technology,
+  2008.
+
+\bibitem{low2000}
+David~J. Low.
+\newblock {Statistical physics: Following the crowd}.
+\newblock {\em Nature}, 407(6803):465--466, September 2000.
+
+\bibitem{taillandier2016}
+MABS.
+\newblock {\em A BDI agent architecture for the GAMA modeling and simulation
+  platform}, May 2016.
+
+\bibitem{newmark1959}
+Nathan~M. Newmark.
+\newblock A method of computation for structural dynamics.
+\newblock {\em Journal of Engineering Mechanics}, 1959.
+
+\bibitem{pan2006}
+Xiaoshan Pan, Charles~S. Han, Ken Dauber, and Kincho~H. Law.
+\newblock Human and social behavior in computational modeling and analysis of
+  egress.
+\newblock {\em Automation in Construction}, 15(4):448--461, 2006.
+\newblock The first conference on the Future of the \{AEC\} Industry (BFC05).
+
+\bibitem{pan2007}
+Xiaoshan Pan, Charles~S. Han, Ken Dauber, and Kincho~H. Law.
+\newblock A multi-agent based framework for the simulation of human and social
+  behaviors during emergency evacuations.
+\newblock {\em AI \& SOCIETY}, 22(2):113--132, 2007.
+
+\bibitem{pelechano2005}
+Nuria Pelechano, Kevin O'Brien, Barry Silverman, and Norman Badler.
+\newblock Crowd simulation incorporating agent psychological models, roles and
+  communication.
+\newblock Technical report, Center for Human Modeling and Simulation University
+  of Pennsylvania, 200 S. 33rd St. Philadelphia, PA 19104-6389 USA, 2005.
+
+\bibitem{anand1995}
+Anand~S. Rao and Michael~P. Georgeff.
+\newblock Bdi agents: From theory to practice.
+\newblock In {\em Proceedings of the First International Conference on
+  Multi-Agent Systems (ICMAS-95)}, pages 312--319. IAAA, 1995.
+
+\bibitem{tdfwebsite}
+TDF.
+\newblock Tactics development framework.
+\newblock http://agentprojects.com/tdf/.
+
+\bibitem{parunak1998}
+H.~{Van Dyke Parunak}, Robert Savit, and Rick~L. Riolo.
+\newblock {\em Agent-Based Modeling vs. Equation-Based Modeling: A Case Study
+  and Users' Guide}, pages 10--25.
+\newblock Springer Berlin Heidelberg, Berlin, Heidelberg, 1998.
+
+\bibitem{gunsteren1990}
+Wilfred~F. van Gunsteren and Herman J.~C. Berendsen.
+\newblock Computer simulation of molecular dynamics: Methodology, applications,
+  and perspectives in chemistry.
+\newblock {\em Angewandte Chemie International Edition in English},
+  29(9):992--1023, 1990.
+
+\bibitem{ruijven2011}
+Theo van Ruijven.
+\newblock Serious games as experiments for emergency management research: A
+  review.
+\newblock In {\em 8th International ISCRAM Conference}, Lisbon, Portugal, May
+  2011.
+\newblock need for realism of underlying model to get valid results,
+  transferable to real life situations.
+
+\end{thebibliography}

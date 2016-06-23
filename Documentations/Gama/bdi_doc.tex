@@ -1,0 +1,142 @@
+\documentclass[a4paper]{article}
+
+\usepackage{titling}
+\newcommand{\subtitle}[1]{%
+  \posttitle{%
+    \par\end{center}
+    \begin{center}\large#1\end{center}
+    \vskip0.5em}%
+}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{url}
+\usepackage{mathtools}
+\usepackage{pxfonts}
+\usepackage{listings}
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{caption}
+\usepackage{tcolorbox}
+\usepackage{lipsum}
+\usepackage[final]{pdfpages}
+
+\tcbuselibrary{skins,breakable}
+\usetikzlibrary{shadings,shadows}
+
+\newenvironment{blueblock}[1]{%
+    \tcolorbox[beamer,%
+    noparskip,breakable,
+    colback=LightBlue,colframe=DarkBlue,%
+    colbacklower=DarkBlue!75!LightBlue,%
+    title=#1]}%
+    {\endtcolorbox}
+
+\title{Gama 1.7 BDI Documentation}
+\author{Geoffrey Danet}
+\date{\today}
+
+\begin{document}
+
+	\maketitle
+
+	\section{BDI}
+        \subsection{Instantiation}
+        Required declaration :
+        \lstset{language=Java}          % Set your language (you can change the language for each code-block optionally)
+        \begin{lstlisting}[frame=single]  % Start your code-block
+
+species <specie_name> control: simple_bdi
+{
+    ...
+}
+        \end{lstlisting}
+        \subsection{Functions}
+            \begin{blueblock}{get\_plans()}
+                \textit{Description}: Get the list of plans. \\
+                \textit{Returns}:
+                \begin{itemize}
+                    \item \textit{Type}: \textbf{list}<\textbf{BDIPlan}>
+                    \item \textit{Description}: The list of BDI plans.
+                \end{itemize}
+            \end{blueblock}
+
+            \begin{blueblock}{add\_belief(belief)}
+                \textit{Arguments}:
+                \begin{itemize}
+                    \item \textbf{predicate} belief: predicate to add as a belief. (Optional)
+                \end{itemize}
+                \textit{Description}: Add the predicate in the belief base. \\
+                \textit{Returns}:
+                \begin{itemize}
+                    \item \textit{Type}: \textbf{bool}
+                    \item \textit{Description}: True if it is added in the base.
+                \end{itemize}
+            \end{blueblock}
+
+            \begin{blueblock}{has\_belief(belief)}
+                \textit{Arguments}:
+                \begin{itemize}
+                    \item \textbf{predicate} belief: predicate to check. (Optional)
+                \end{itemize}
+                \textit{Description}: Check if the predicates is in the belief base.\\
+                \textit{Returns}:
+                \begin{itemize}
+                    \item \textit{Type}: \textbf{bool}
+                    \item \textit{Description}: The predicate if it is in the base.
+                \end{itemize}
+            \end{blueblock}
+
+            \begin{blueblock}{get\_belief(belief)}
+                \textit{Arguments}:
+                \begin{itemize}
+                    \item \textbf{predicate} belief: predicate to get. (Optional)
+                \end{itemize}
+                \textit{Description}: Get the predicate in the belief base (if several, returns the first one).\\
+                \textit{Returns}:
+                \begin{itemize}
+                    \item \textit{Type}: \textbf{predicate}
+                    \item \textit{Description}: The predicate if it is in the base.
+                \end{itemize}
+            \end{blueblock}
+
+            \begin{blueblock}{get\_belief\_with\_name(name)}
+                \textit{Arguments}:
+                \begin{itemize}
+                    \item \textbf{string} name: Name of the predicate to check.
+                \end{itemize}
+                \textit{Description}: Get the predicates is in the belief base (if several, returns the first one).\\
+                \textit{Returns}:
+                \begin{itemize}
+                    \item \textit{Type}: \textbf{predicate}
+                    \item \textit{Description}: The predicate if it is in the base.
+                \end{itemize}
+            \end{blueblock}
+
+            \begin{blueblock}{get\_beliefs\_with\_name(name)}
+                \textit{Arguments}:
+                \begin{itemize}
+                    \item \textbf{string} name: Name of the predicates to check.
+                \end{itemize}
+                \textit{Description}: Get the list of predicates is in the belief base with the given name.\\
+                \textit{Returns}:
+                \begin{itemize}
+                    \item \textit{Type}: \textbf{list}<\textbf{predicate}>
+                    \item \textit{Description}: The list of predicates.
+                \end{itemize}
+            \end{blueblock}
+
+            \begin{blueblock}{get\_beliefs(name)}
+                \textit{Arguments}:
+                \begin{itemize}
+                    \item \textbf{predicate} name: Name of the predicates to check.
+                \end{itemize}
+                \textit{Description}: Get the list of predicates is in the belief base.\\
+                \textit{Returns}:
+                \begin{itemize}
+                    \item \textit{Type}: \textbf{list}<\textbf{predicate}>
+                    \item \textit{Description}: The list of predicates.
+                \end{itemize}
+            \end{blueblock}
+\end{document}

@@ -1,0 +1,453 @@
+\chapter{Simulating population behaviours in bushfires}
+
+\author{Geoffrey Danet}
+
+    \section{Introduction}
+
+        In 2009, the region of Victoria (Australia) was the victimes of violent firebush
+        causing considerable death and injured. The aim of this simulation is to provide tools to emergencies
+        services in order to predict the potential civilians behaviors during a firebush.
+
+    \section{Crisis management}
+
+        Many crisis situations occurs in this world, which can cause both psychological and physical injuries. In order to prevent such
+        situations, many countries are actively searching ways to prevent crisis and decrease the potential number of victims.
+        The observation was the first source of knowledge, but imply victims as well. Quickly, the idea of simulation pop in the mind.
+        A real simulation is the closest solution to get realistic results but is very costly, probably impossible to produce, and of
+        course can be very dangerous.
+        On the other hand, we have the computer simulation which get a cheap, infinitely reusable, and safe solution but with a less
+        realistic result. Moreover, this kind of simulation offer a very high control of the environment and allow to reproduce very precise scenario easily.
+
+        \subsection{Modeling and Simulation}
+
+            There exist many methods in order to produce simulations. Among them, we can found two main categories of simulation: the equation based simulation and the multi-agent based simulation which provide interaction between several entities called agents. The equation based simulation is particulary used for physics, chemistry or biology purpose. This approach require a high knowledge of behaviors and is made for one specific purpose in a predictable way. Thus, a complex system such has cognitive entities can't or is extremely difficult to model using equation and will react in the same manner according to the equation. The multi-agent simulation provide a more high level of abstraction and provide to the model an easier interaction between their entities. Agents can be defined in two categories, the passive agent (obstacle, road, house, ...) which define the environment and with which the active agent (human, car, ...) is interacting. Some existing studies in human behaviors try to use a automaton approach to represent behavior's states, the agents first perceive his environment, interpret the event, make a decision and finally use the associated action. Unfortunately this approach have a too high level of abstraction, all events are interpreted in the same way by all agents and does not take in account the fact that the signification of the event can be wrong (e.g. false alarm in a building).\cite{modeling2008} Others studies tried to reproduce the interpretation of risk in the model with a descriptive psychology approach.\cite{review2014}
+            Another one, try to make an abstraction of human behaviors through physics similar system. For exemple, the fluid and particles systems are used in order to represent crowds. \cite{multi-agent2007}
+
+            These proposition result on a low level abstraction which decrease the behavior comprehension during the simulation. Moreover, the behavior trends are the same for all agents.
+
+            % Xioshan
+
+            Xiaoshan et al. believe that the simulation framework of individual cognitive processes will produce emergent social or collaborative behavior.\cite{multi-agent2007} 
+            Most existing model for simulation use :
+            \begin{itemize}
+                \item Fluid of particle systems: used for evacuation simulation, crowds behaviors are similar to fluids.
+                \item Matrix based systems: The area is represented into cells (grid) where cells represent obstacles, free area, area occuped by a person, ...
+                \item Emergent systems: The interactions of simple parts/elements can create an emergeance phenomena and produce complex system (here crowd dynamics)
+            \end{itemize}
+
+            Individual's behaviors follow three basic conventions according to Xiaoshan et al. \cite{human2006} People how are following instinct, following experience and people who have bounded rationality.
+
+            Agent psychological models, roles and communication, where communication can affect through a psychological model the behaviors of autonomous agents. Pelechano et al. propose a framework who combine a psychological model (PMFserv) with a crowd simulation system (MACES). They particulary work on way finding and communication between agents. \cite{crowd2005}
+
+            Another studies about crowd simulation, human behaviors and social behaviors shows several aspect of non-adaptive crowd behaviors.
+            Human and social behaviors are categorized in three distinct category: 1) individual (collection of individuals), 2) interactions among individuals and 3) groups. \cite{human2006}
+
+            % Kuligowski
+
+            Kuligowski introduce a conceptual model of the behavioral process for building fire composed in four phases: 1) Perception of the cue(s), 2) Interpretation of the cue, situation, and risk, 3) decision-making and 4) Actions.
+            Unfortunately the level of abstraction is too important to aptly represent the real human behaviors.
+            All signals are interpreted in the same way by all agents and does not take in account interpretation such as false warn.\cite{modeling2008}
+                
+            % Mu
+
+            Mu H.L. et al. show the important impact of the psychology on the decision making process during egress. 
+            Decision and perception will change according to the environment. Agents are supposed to adapt and change their behavior according to the situation. \cite{pre-evaluation2013}
+            An agent need to confirm information about fires, if the cue is ambiguous, the agent may search for more information to confirm. However, after this process, he may also behave other action as try to extinguish fires, inform other people or alert, dress or collect property, start to escape (evacuate or jump out), maintain original status or ignore information or can wait for rescuing and shelter. This studies is adapted for a building environment using automaton.
+
+            % Kinateder
+
+            Kinateder et al. introduce a theoretical framework for fire evacuation principally based on the study of risk perception. \cite{review2014}
+
+        \subsection{Belief Desire Intention (BDI)}
+
+            BDI is a agent modeling approaches based on the human psychology. Each agent are defined by Belief, Desire and Intention which will affect his behavior during the simulation. Obviously, this method fit very well for human behavior simulation and is more intuitive to use. Thus, the development of the simulation become easier and more understandable by scientists.
+            With standards agents such as automatons, each behaviors, plan must be translated using formula and states. Each transitions are determined and defined according to each situations and finally result to a similar agent behaviors. The BDI approaches allows agents to have more realistic behaviors through their own decisions. 
+            However, BDI doesn't suit for building systems that must learn and adapt their behavior and doesn't have explicitly multi-agent aspects of behavior. \cite{bdi1999}
+
+            There already exist BDI framework \cite{simple2015}:
+            \begin{itemize}
+                \item Classic framework : Procedural Reasoning System (PRS)
+                \item Commercial framework JACK which inherits many properties from PRS $\rightarrow$ allows to define MAS
+                \item The most advanced framework : Jadex, addon of the JADE framework with an explicit representation of goals.
+                \item GAMA modeling platform based on the GAML modeling language.
+            \end{itemize}
+
+            Capturing the Quake Player: Using a BDI Agent to Model Human Behaviour
+            Emma Norling
+            \begin{itemize}
+                \item Simulation based on JACK BDI framework and Quake 2 for graphics rendering.
+                \item "BDI agents are particularly suited to human modelling because of their folk psychological basis"
+                \item "For testing and evaluation and operations analysis, it provides test subjects who can repeat the experiment(s) endlessly without suffering fatigue or boredom, with repeatable results. For training, it is particularly valuable in safety-critical domains, where a mistake in the real world may have catastrophic results, but a simulated environment gives the designer or trainee a safe place to explore."
+            \end{itemize}
+
+            A BDI architecture for normative decision making.
+            N. Criado, E. Argente, V. Botti
+            \begin{itemize}
+                \item Adaptation of norms in BDI architectures.
+                \item Divided in two related activities : the recognition of norms and their consideration.
+                \item Affect the decision process.
+            \end{itemize}
+
+            Folk Psychology for Human Modelling: Extending the BDI Paradigm
+            Emma Norling
+
+            "This paper has presented an approach to developing a framework that represents more of the basic human characteristics, but maintains this conceptual simplicity"
+
+    \section{Witness Statement}
+
+        This study are principally based on related works and from witness statement of the Black Saturday.
+        Witness statement are a good source of information about the behavior of people during this day.
+        We can distinguish several behavior/profil:
+        \begin{itemize}
+            \item Aware/unaware of the fire risk,
+            \item Stay or leave,
+            \item Among peoples who want stay:
+            \begin{itemize}
+                \item Wants fight fire:
+                \begin{itemize}
+                    \item (Know / Do not know) how to fight fire,
+                    \item (Are / Are not) enough mentally prepared,
+                \end{itemize}
+                \item Wait and see until they feel in danger
+            \end{itemize}
+        \end{itemize}
+
+        \begin{table}[!ht]
+            \caption{Triggers}
+            \label{tab:1}
+            \begin{tabular}{|c|c|}
+                \hline
+                Percept & Message \\
+                \hline
+                See smoke & Voices (neighbors, police, ...)\\
+                See ember & Phone call \\
+                Smell smoke & TV \\
+                Sky grow dark & Radio \\
+                Sky blazing orange/red & Web \\
+                Too hot (radiant heat)& CFA siren \\
+                Road is blocked & \\
+                \hline
+            \end{tabular}
+        \end{table}
+
+        \subsection{Notes}
+
+            \subsubsection{Sue Exell}
+                Dispose de cinq réservoir en plastique pour une capacité totale de 22.5kL en plus d'un réservoir de 4kL en acier.
+                Il y avait environ 15kL pendant le Black Saturday.
+                Dispose de seaux en plastique (qui ont fondu), de quelques mètres de tuyaux (trop court), d'une pompe à eau thermique.
+                Ils ont sorti au cas où la pompe à eau.
+                Aucun plan pour le feu.
+                Aucune experiences pour lutter contre le feu.
+                Combat l'incendie, avec l'aide d'amis et de volontaires du CFA.
+
+            \subsubsection{Gregory Weir}
+                Evacue sa mère, et se retrouve coincé avec son fils (14 ans) en prenant trop de temps à faire des préparatifs dans la ferme.
+                On fait quelques préparation avant l'arrivé du feu.
+                Après les préparation, ils ont attendu que le feu arrive.
+                La pompe à eau n'a fonctionné que 30sec, ils ont essayé de faire le maximum mais il y avait trop de départ de feu.
+                Sauvé grace aux reserve d'eau à proximité (lac).
+
+            \subsubsection{Andrew Kleinig}
+                ~40 et 60 ans.
+                Déterminé à aller à la propriété malgré les barrages de la police (prend un autre chemin qui n'est pas bloqué).
+                Retire les objets de la maison (préparations).
+                La pompe à eau ne fonctionne pas.
+                Reste dans la maison pour se protéger,
+                Sort lorsque la chaleur devient insupportable.
+
+            \subsubsection{Anja Toikka}
+                ~70 ans.
+                On suivis des réunions du CFA.
+                Bien préparé (débrousaillé, réservoir d'eau, lance incendie, ...).
+                Sont entrainé.
+                Se sont réfugié dans un abris.
+
+            \subsubsection{Rainier Verlaan}
+                Très bien préparé.
+                Déterminé à combattre le feu.
+                C'est finalement réfugié dans la maison.
+                Pas assez mentalement préparé pour faire face au feu.
+
+            \subsubsection{Anastasia Scott}
+                See smoke in afternoon
+                A neighbor Alan Ryan had told her he would have his radio on and that he would be in touch if there was anything to worry about.
+                Initially I thought that he was telling me that it was too far away to be concerned.
+                But then she thought if the wind is more than 100 km per hour it wouldn't take very long for the fire to travel 20 kilometers.
+                She wasn't sure if it was the sun or flames. He told her he thought it was the sun,
+                She accepted what he said as he is more knowledgeable about weather than she is.
+                Hear the CFA siren but only two times (should sounding continuously).
+
+            \subsubsection{Elaine Mary Postlethwaite}
+                Même chose qu'avec Anastasia, elle montre à un proche le ciel orangé (alors qu'ils savent qu'il y a des feux à proximités).
+                et croivent que c'est le soleil (elle l'a cru).
+                Malgré la confirmation que le feu arrive droit sur la ville, le mari continue de vouloir rester et demande à sa femme de
+                préparer un sandwich et du thé.
+                Finalement elle la peur et la colère ressenti la pousse à abandonner son mari et de quitter la ville.
+
+            \subsubsection{Helen Elizabeth Kenney}
+                Maison équipé d'un système d'irrigation (réservoir de 1kL) qui peut être utilisé pour combattre le feu.
+                Le mari pense qu'il n'est pas possible de protéger la maison face à un incendie similaire à celui du mois de Juin 2009.
+                La maison est entouré d'arbre (Gommier) qui met en danger l'habitation.
+                Suit la progression du feu avec une radio.
+                Semble connaitre les procédure en cas d'incendie (serviette humide à chaque fenêtre, ...).
+                Après les faits, ils ont eu le sentiment d'avoir échoué à protéger leur famille.
+
+            \subsubsection{Anna Macgowan}
+                Pensait être à l'abris des feux de brousses, de ne jamais être menacé par un feu de brousse.
+                N'était pas préparé pour les feux, pas de plan d'action.
+                Portait des lunettes soleil, un short, des chaussures en matière plastique.
+                Allume la radio après avoir senti de la fumé.
+                Le CFA lui a recommendé d'évacuer, mais elle a refusé.
+                Elle est resté dehors à regarder les flammes arriver.
+                Les flammes sont arrivé brusquement, ne lui donnant pas le temps de réagir.
+                Elle a trouvé les flammes fascinant et étrangement magnifique.
+                Le feu allait vers elle mais à changé de direction (vent).
+                A la vue d'un nouveau départ de feu (prévenu par ses voisins) elle va combattre le feu
+                et défendre sa maison.
+                Elle est heureuse d'être resté à combattre le feu et de ne pas avoir fui.
+                Déclare ne pas être paré mentalement pour faire face à un feu de brousse, elle n'avait aucune idée de ce qui
+                signifiait "faire face à un feu".
+
+            \subsubsection{Alice Barber}
+                Connaissait les risques d'incendies.
+                A préparé sa propriété en conséquence, (18kL + 500L réservoir à eau métalique, des tuyaux).
+                Mais n'avait pas de pompes à eau thermique (uniquement électrique) et de groupe électrogène.
+                A appris les bases du combat contre le feu.
+                A un plan en cas d'incendie :
+                1) Tout humidifier autour de la maison, quitter l amaison si la menace est trop importante.
+                2) Utiliser le Macedonian Club proche de la maison comme refuge ou d'utiliseer la voiture pour fuir le plus loin possible.
+                A mis ces affaires pour le feu après avoir avoir vu du feu au loin. Veux combattre le feu si nécessaire.
+                Sa voisine Kate (semblait déprimé) signal que la route de Whittlesea est bloqué et suggère de partir vers Kinglake.
+                A entendu la sirène du CFA venant de l'ouest de Kinglake.
+                La voisine passe en voiture en roulant et en claxonnant "comme une folle".
+                Après avoir fait le point sur la situation en écoutant la radio, elle décide de quitter son domicile ... mais pas sans son chat !
+                Elle trouve finalement le chat et prend la voiture (au prix de multiple morsure et griffure de la part du chat).
+                Prend de l'eau, des médicaments, une selle ? (saddle) et une boite de photos.
+                En partant elle renseigne ses voisins et remarque des enfants apparement inconscient de la situation actuel qui jouais dans le jardin
+                Elle a été surpris par le feu, a éteint le moteur et l'air conditionné et c'est réfugié sous une serviette humide.
+
+            \subsubsection{Frank Gissara}
+                Aucune expérience.
+                Ont une piscine de 50kL, 10k Gallons dans des réservoir d'eau (mais aucune pompe à eau !) et un extincteur.
+                N'ont aucun plan en cas d'incendie.
+                Ils ont entendu à la radio un avertissement pour les feux.
+                Suit la progression de l'incendie et les changements de direction du vent.
+                Prépare la maison, bouche les gouttières et les remplies d'eau, humidifier la maison (façade).
+                Portait des affaires longues (aucune information à propos de la matière), mais aucun masque ou chapeau.
+                Attend de voir si le feu arrive ou pas en sirotant des bières (~ 2-3 bières) ...
+                Personne n'était ivre !
+                Le ciel devient sombre, le vent devient plus puissant,
+                Le grondement du feu devient plus fort.
+                A soudainement vu une boule de feu.
+                A essayé d'éteindre le feu avec un extincteur (qui c'est très vite vidé).
+                Ils se sont réfugié à l'interieur de la maison, mais une fois que le feu c'est rapproché, ils ont décider d'aller à l'intérieur
+                du réservoir d'eau.
+
+            \subsubsection{Roger Leslie Cook}
+                Etait au courant des risques d'incendies.
+                Les alentours de la propriété avaient été néttoyé.
+                Voulait rester et défendre la propriété.
+                Equipé d'un reservoir de 23kL d'eau avec une pompe électrique ou la pression si il n'y a pas d'électricité.
+                Utilise des seaux en métal.
+                Ne dispose pas de système d'arrosage sur le toit.
+                Elle pensait que la maison ne prendrait pas feu, qu'elle était solide au point de pouvoir résister à un tremblement
+                de terre sans problème. La maison lui procurait un sentiment de sécurité.
+                Elle était entrainé pour combattre le feu.
+                A trouvé le ciel étrange, mais a cru que c'était des réflexions du soleil sur les nuages.
+                Son fils a reçu un appel les conseillant fortement de quitter les lieux.
+                Ils ont hésité à aller dans l'habrit du CFA.
+                Ils ont pris les documents important (certificat de naissance, marriage, ...).
+                Elle ne voulais pas quitter la maison qu'elle avait contruite (altération du jugement), mais son fils l'a persuadé.
+                Son fils a passé sa jeunesse aux alentours des forêts et semble avoir une certaine expérience. Il a réussi à percevoir
+                le danger d'un feu en se basant sur la couleur du ciel et la formation de nuage (Aucune fumé ou feu en vue).
+                Ils sont partis de la maison.
+
+            \subsubsection{Judith Margaret Frazer-Jans}
+                ~60 ans.
+                La maison dispose d'un système d'arrosage, d'un réservoir d'eau de 42kL avec une pompe à eau thermique et électrique.
+                Ils Voulaient rester et défendre leur maison. Ils ont un plan détailé et ont investis du temps et de l'argent pour
+                assurer la defense de leur demeure.
+                Le jour J, elle était au courant que la journée avait un risque extrème d'incendie. Elle a préparé en conséquence la
+                maison en prévision d'un feu de brousse. Ils se sont habillé avec des vêtements adaptés pour combattre le feu.
+                Elle a vu que le ciel est devenu orangé et est passé à l'étape suivante de leur plan anti-incendie. Elle a essayé de
+                s'informer sur le site du CFA et du DSE.
+                Ils n'ont ni vu ou entendu le feu venir, seul la chaleur du feu les a alertés.
+                La pompe à eau (thermique) s'est arrêté à cause de la chaleur (sécurité).
+                Se sont réfugié dans la maison.
+                Ils ont surveillé s'il n'y avait pas de départ de feu.
+
+            \subsubsection{Daryl Hull}
+                Était au courant que la journée allait être dangeureuse (les pires conditions possible) via la chaine TV ABC
+                Il a vu la fumé, mais il a continué de travailler (café).
+                La fumé c'est rapproché de la ville, il a commencé à trouver la situation dangeureuse.
+                Il ne savait pas qu'une auberge avait un plan contre le feu.
+                Il pensait que "l'oval" était le point de rassemblement en cas d'urgence.
+                Il y avait beaucoup de confusionet de panique parmis les habitants.
+                Ne voulant pas prendre le risque de prendre la voiture à cause des chutes d'arbres ... il décide d'aller dans le lac
+                (sur une île au centre).
+                Lorsque l'île à commencé à brûler, il est allé dans l'eau.
+                Deux voitures arrive vers le lac, il a entendu la voix de deux hommes et d'un enfant.
+                Les voitures ont explosé plus tard, il ne sait pas s'ils se sont échappé avant qu'elles n'explosent.
+                Il a vu que des voitures n'avaient pas explosé et a hésité à y aller s'y réfugier.
+                Il a vu au même moment une lumière bleu venant de "l'oval".
+
+            \subsubsection{Bart Wunderlich (Emergency)}
+                Père de famille.
+                Il était plutôt confient en restant à la propriété, car il estimait être suffisament équipé.
+                17K gallons d'eau, une pompe thermique pour les incendies avec 70m de tuyaux, une "boite à feu" contenant du matériel
+                pour combattre le feu.
+                Il était au courant que la journée allait être dangeureuse grâce à la radio (ABC).
+                Il a vu de la fumé au début de l'après midi, il a préparé aussitôt le matériel pour combattre les incendies.
+                Un amis la suggéré de suivre la progression des évenements sur le site web du CFA.
+                Un de leurs amis leurs dit que le feu arrive dans leurs dirrection et qu'il est temps de partir.
+                Il a fait évacuer sa femme avec ses enfants.
+                Sachant que le feu arrive, il a le sentiment que la situation n'est pas vraiment bonne.
+                A voulu combattre le feu mais à renoncé après avoir vu l'ampleur de l'incendie.
+
+            \subsubsection{Kay Crawford}
+                A un élevage de chiens.
+                Avait un plan en cas d'incendie qui n'a pas fonctionné (se réfugier au centre CFA à proximité).
+                A finalement pris tout ses chiens et est parti.
+
+        \subsection{Cause de morts}
+
+            source : \href{http://www.royalcommission.vic.gov.au/Finaldocuments/volume-1/HR/VBRC_Vol1_Chapter16_HR.pdf}{Victorian Bushfire Report Commission final report Vol1. Chapter 16}.
+
+            \subsubsection{Josef \& Glenys Matheis}
+                Josef (68 ans),
+                Glenys (61 ans),
+                Morts dans leur cave (intoxication au monoxide de carbone).
+                Ils savaient que la propriété aurait été difficile à défendre ou qu'il est difficile de
+                partir pendant un feu de brousse.
+                Ils avaient un plan, rester et défendre leur maison (Ils étaient déterminés) et s'il y avait un problème,
+                ils avaient prévu de se réfugier dans leur cave.
+                Ils ont été prévenu par leurs proches que le feu arrivait dans leur direction.
+                Ils ont alors voulu évacuer mais ils ont changé d'avis et sont restés.
+
+            \subsubsection{Ronald Barling \& Richard Hall}
+                Ron Barling (71 ans),
+                Richard Hall (52 ans),
+                Connaissent les risques, et ont décidé dès le début d'évacuer.
+                Leurs fils à appelé pour prévenir qu'il y avait de la fumé et qu'ils devraient écouter la radio
+                pour se tenir informé.
+                Ils vont vouloir évacuer mais le vent a changé de direction. Finalement, il vont décider de rester et
+                de défendre car ils ne savait pas vraiment où se trouvait le feu.
+                Retrouvé dans la salle de bain.
+
+            \subsubsection{Gavin dunn}
+                Gavin dunn (39 ans).
+                En 1992, Gavin à eu un accident de la route qui lui a causé des lésions cérébrales qui affecte sa parole et son énergie ?
+                (energy levels).
+                Ses intention était de rester et de se réfugier dans un petit barrage (little dam), aucune intention de fuir ou d'évacuer.
+                Sa mère le préviens que de le feu approche d'une ville voisine, et qu'il devait écouter la radio.
+                Plus tard, nouvel appel pour le prévenir que le feu approche de plus en plus, cependant Gavin estime que tout va bien et
+                a coupé la radio parce qu'il en avait marre de l'écouter ... Son voisin, va le voir avant de partir et lui recommande
+                d'évacuer lui aussi. Mais il refuse de partir et déclare vouloir se réfugier dans le barrage avec une couverture si nécessaire.
+                Son corps a été retrouvé dehors.
+
+            \subsubsection{Bob Harrop}
+                Bob Harrop (83 ans).
+                Son intention était de rester et de défendre sa propriété du feu.
+                Bob et un de ses amis (Rick) a vu de la fumé, le ciel est devenu sombre. Ils ont alors vérifié sur le site de la CFA la situation
+                Plus tard, la fumé devient de plus en plus dense et le ciel de plus en plus sombre.
+                Le feu est arrivé, la fumé était très dense. Rick retrouva Bob demi conscient à un angle de sa maison avec des problème pour
+                respirer. Il la mit dans sa voiture et partit vers les urgences. À ce moment le pouls de Bob était faible.
+                Succombe plus tard suite à une exposition excessive au feu et dû à une insuffisance coronarienne (apport en sang insuffisant).
+
+            \subsubsection{Daniela Marulli, Aldo Junior and Jesse Inzitari}
+                Daniela Marulli (41 ans),
+                Aldo Inzitari (? ans),
+                Jonathon (14 ans),
+                Jesse (11 ans),
+                Aldo Junior 'AJ' (5 ans).
+                Le plan de la famille était de rester et de protéger la maison en cas d'incendie, et de partir si la situation devient trop
+                dangeureuse. Ils n'avaient aucun plan concernant la direction à prendre durant la fuite. Le propriétaire à prévenu la famille
+                que la maison était assuré et qu'ils devaient faire passer leur sécurité en premier et évacuer sans prendre de risque lors des
+                premier signes de feu.
+                Jonathon a vu de la fumé au loins, malgré cela, ils estiment que la fumé est loin et que ça ne les concernaient pas.
+                Plus tard, Aldo et Jonathon ont voulu préparer la pompe au cas où. Cette dernière ne fonctionnera pas à cause d'une trop faible
+                pression et d'une coupure de courant. La fumé devient de plus en plus dense augmentant les difficultés à respirer. Après que
+                l'électricité soit retabli, ils ont regardé la TV pour savoir où se trouvait le feu. Ils ont fait quelques préparation et
+                Jonathon remarqua une lumière orange éblouissante. 30min plus tard Aldo aperçu le feu sur les montagnes.
+                Ils ont pris le nécessaire et sont parti, après 2.5km de route, un arbre bloque la route.
+                Ils ont essayé de trouvé refuge mais Daniela, Jesse et Aldo Junior n'ont pas réussi à passer au dessus de la porte d'une
+                propriété ce qui les ont condamnés.
+
+            \subsubsection{Donald, Minnie, John and Cheri-Lee Walker}
+                Donald Walker (87 ans),
+                sa femme Helen Walker alias Minnie (86 ans),
+                Leur fils John Walker (59 ans),
+                et sa femme Cheri-Lee Walker (61 ans),
+                sont décédés à leur domicile.
+                Leurs plan contre le feu était de rester et de défendre. Minnie et Cheri-Lee sont évacué dans un point d'évacuation inconnu
+                pendant que leurs mari Donald et John combattent le feu. Ils ont une grande expérience dans le combat du feu mais avaient
+                malheureusement une santé fragile. Ce qui ne les ont pas empéché d'essayer de défendre malgré tout leur domicile. Les voisins
+                ont prévenu la famille de l'arrivé du feu, mais étant confiant en leur expérience à combattre le feu, ils n'ont pas changé leurs
+                plan. La fumé provoqua des difficultés repiratoires, Cheri-Lee veut alors évacuer mais John ne veux pas partir sans ses parents.
+                Ils resteront et succomberont face au feu.
+
+            \subsubsection{Barry Johnston}
+                Barry Johnston (59 ans)
+                Connaissait les risques, et avait équipé sa maison contre les feux.
+                Sont plan contre le feu était de défendre sa maison et le bunker autant que possible.
+                Il se tenait informé des évènements via la radio.
+                Durant un appel d'un des proches, il entendit un bruit, mais n'a pas pu savoir s'il sagissait du vent ou d'un feu.
+                Il est retrouvé mort dans son bunker.
+
+            \subsubsection{Lloyd and Rena Martin}
+                Lloyd Martin (83 ans), Rena Martin (76 ans), mais toujours en bonne santé.
+                La propriété était préparé pour un éventuel feu de brousse. Ils assistaient régulièrements aux réunions du
+                CFA.
+                Ils étaient au courant qu'il y avait des feux de brousses car ils écoutaient la radio. Rena contrairement à
+                son mari voulais partir. Son mari va cependant la persuader de rester.\\
+                \textit{"No house is worth dying over ... he would want to save the trees"}
+                Il semblerait que le toit de la maison ai cédé à cause du vent exposant la maison des braises et à incendier la maison
+                rendant tout les efforts du couple vain.
+                Ils seront retrouvé près des ruines de la maison.
+
+
+    \section{Agent description}
+
+        \subsection{Civils}
+
+            Attributs:
+            \begin{itemize}
+                \item Mobilité,
+                \item Connait les risques,
+                \item Sait comment combattre le feu,
+                \item À un plan pour combattre le feu,
+                \item Détermination à combattre le feu,
+                \item Sentiment (sécurité, ...),
+                \item Peut être facilement ou difficilement influencé par d'autre agent ou par l'environement,
+                \item Aversion au danger,
+                \item Livelihood.
+            \end{itemize}
+
+            Croyances :
+            \begin{itemize}
+                \item Sait comment combattre le feu,
+                \item Connait les risques,
+                %\item Déterminé à combattre le feu,
+                \item Ne risque rien.
+            \end{itemize}
+
+            Désirs :
+            \begin{itemize}
+                \item Éviter tout danger,
+                \item Rester en vie,
+                \item Protéger ses biens,
+                \item Voir le feu,
+                \item Obtenir des informations(observation, voisin, radio, TV, ...)
+                \item Joindre la famille,
+            \end{itemize}
+
+            Intentions :
+            % actions,
+            \begin{itemize}
+                \item Préparer le matériel avant l'arrivé de l'incendie,
+                \item Préparer le nécessaire pour partir de la maison,
+                \item Plan pour combattre le feu,
+                \item Prévenir son entourage en cas d'incendie,
+                \item Prévenir ses proches lorsque l'agent est en sécurité.
+            \end{itemize}

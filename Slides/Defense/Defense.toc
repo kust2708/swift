@@ -1,0 +1,6 @@
+\beamer@endinputifotherversion {3.36pt}
+\beamer@sectionintoc {1}{State Of the Art}{4}{0}{1}
+\beamer@sectionintoc {2}{Data and Tools}{11}{0}{2}
+\beamer@sectionintoc {3}{Implementation}{20}{0}{3}
+\beamer@sectionintoc {4}{Experiments and results}{24}{0}{4}
+\beamer@sectionintoc {5}{Conclusion}{29}{0}{5}

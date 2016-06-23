@@ -1,0 +1,29 @@
+\begin{thebibliography}{1}
+
+\bibitem{phoenix}
+Thomas~J. Duff, Derek~M. Chong, and Kevin~G. Tolhurst.
+\newblock Quantifying spatio-temporal differences between fire shapes:
+  Estimating fire travel paths for the improvement of dynamic spread models.
+\newblock {\em Environmental Modelling and Software}, 46:33--43, 2013.
+
+\bibitem{modeling2008}
+Erica~D. Kuligowski.
+\newblock Modeling human behavior during building fires.
+\newblock Technical report, National Institute of Standards and Technology,
+  2008.
+
+\bibitem{human2006}
+Xiaoshan Pan, Charles~S. Han, Ken Dauber, and Kincho~H. Law.
+\newblock Human and social behavior in computational modeling and analysis of
+  egress.
+\newblock {\em Automation in Construction}, 15(4):448--461, 2006.
+\newblock The first conference on the Future of the \{AEC\} Industry (BFC05).
+
+\bibitem{crowd2005}
+Nuria Pelechano, Kevin O'Brien, Barry Silverman, and Norman Badler.
+\newblock Crowd simulation incorporating agent psychological models, roles and
+  communication.
+\newblock Technical report, Center for Human Modeling and Simulation University
+  of Pennsylvania, 200 S. 33rd St. Philadelphia, PA 19104-6389 USA, 2005.
+
+\end{thebibliography}

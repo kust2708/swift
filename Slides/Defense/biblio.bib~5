@@ -1,0 +1,281 @@
+@techreport{modeling2008,
+	\url = {http://www.fire.nist.gov/bfrlpubs/fire09/PDF/f09018.pdf},
+	author = {Kuligowski, Erica D.},
+	booktitle = {NIST Technical Note 1619},
+	institution = {National Institute of Standards and Technology},
+	title = {Modeling Human Behavior during Building Fires},
+	year = {2008}
+}
+
+@article{pre-evaluation2013,
+	author = {H.L., Mu and J.H., Wang and Z.L., Mao and J.H., Sun and S.M., Lo and Q.S, Wang},
+	issn = {1877-7058},
+	journal = {Procedia Engineering},
+	note = {2012 International Conference on Performance-based Fire and Fire Protection Engineering},
+	pages = {290--296},
+	title = {Pre-Evacuation Human Reactions in Fires: An Attribution Analysis Considering Psychological Process},
+	volume = {52},
+	year = {2013}
+}
+
+@techreport{crowd2005,
+	address = {200 S. 33rd St. Philadelphia, PA 19104-6389 USA},
+	author = {Pelechano, Nuria and O'Brien, Kevin and Silverman, Barry and Badler, Norman},
+	institution = {Center for Human Modeling and Simulation University of Pennsylvania},
+	title = {Crowd Simulation Incorporating Agent Psychological Models, Roles and Communication},
+	year = {2005}
+}
+
+@article{logical2009,
+	abstract = {In this paper, we provide a logical formalization of the emotion triggering process and of its relationship with mental attitudes, as described in Ortony, Clore, and Collins's theory. We argue that modal logics are particularly adapted to represent agents' mental attitudes and to reason about them, and use a specific modal logic that we call Logic of Emotions in order to provide logical definitions of all but two of their 22 emotions. While these definitions may be subject to debate, we show that they allow to reason about emotions and to draw interesting conclusions from the theory.},
+	author = {Adam, Carole and Herzig, Andreas and Longin, Dominique},
+	institution = {IRIT},
+	issn = {1573-0964},
+	journal = {Synthese},
+	keywords = {modal logics; BDI agents; emotions; OCC theory},
+	number = {2},
+	pages = {201--248},
+	publisher = {Kluwer Academic},
+	title = {A logical formalization of the OCC theory of emotions},
+	volume = {168},
+	year = {2009}
+}
+
+@article{multi-agent2007,
+	abstract = {Many computational tools for the simulation and design of emergency evacuation and egress are now available. However, due to the scarcity of human and social behavioral data, these computational tools rely on assumptions that have been found inconsistent or unrealistic. This paper presents a multi-agent based framework for simulating human and social behavior during emergency evacuation. A prototype system has been developed, which is able to demonstrate some emergent behaviors, such as competitive, queuing, and herding behaviors. For illustration, an example application of the system for safe egress design is provided.},
+	author = {Pan, Xiaoshan and Han, Charles S. and Dauber, Ken and Law, Kincho H.},
+	issn = {1435-5655},
+	journal = {AI \& SOCIETY},
+	number = {2},
+	pages = {113--132},
+	title = {A multi-agent based framework for the simulation of human and social behaviors during emergency evacuations},
+	volume = {22},
+	year = {2007}
+}
+
+@article{exitus2012,
+	author = {Manley, Matthew and Kim, Yong Seog},
+	journal = {International Journal of Intelligent Information Technologies (IJIIT)},
+	number = {2},
+	pages = {1--13},
+	publisher = {IGI Global},
+	title = {Exitus: Agent-based evacuation simulation for individuals with disabilities in a densely populated sports arena},
+	volume = {8},
+	year = {2012}
+}
+
+@article{human2006,
+	abstract = {Safe egress is one of the key design issues identified by facility planners, manager and inspectors. Computational tools are now available for the simulation and design of emergency evacuation and egress. However, these tools rely heavily on assumptions about individual human and social behaviors, which have been found to be oversimplified, inconsistent and even incorrect. Furthermore, the behaviors are usually incorporated into the computational model in an ad hoc manner. This paper presents a framework for studying human and social behavior, from the perspectives of human decision-making and social interaction, and for incorporating such behavior systematically in a dynamic computational model suitable for emergency egress analysis.},
+	author = {Pan, Xiaoshan and Han, Charles S. and Dauber, Ken and Law, Kincho H.},
+	issn = {0926-5805},
+	journal = {Automation in Construction},
+	keywords = {Human and social behavior; Decision-making; Egress; Emergency; Computational modeling; Multi-agent system},
+	note = {The first conference on the Future of the \{AEC\} Industry (BFC05)},
+	number = {4},
+	pages = {448--461},
+	title = {Human and social behavior in computational modeling and analysis of egress},
+	volume = {15},
+	year = {2006}
+}
+
+@misc{personality2009,
+	abstract = {Global security is a growing problematic nowadays. In particular, terrorist threats bring security actors to look for new training tools for major scale crisis. In this context, simulation by multi-agent system enables the actors to observe the effects of their actions. In this article, we propose an extension of BDI architecture that consider physiology, emotion and personality: PEP -\&\#x226B; BDI, and show how it is used to model crisis situations.},
+	author = {Jones, Haza\"{e}l and Saunier, Julien and Lourdeaux, Domitile},
+	institution = {Laboratoire Heudiasyc},
+	keywords = {Virtual Reality; BDI; architecture; Personality; Emotions; Physiology; Multi-agent Systems},
+	organization = {CNRS},
+	school = {Universit\'{e} de Technologie de Compi\`{e}ge},
+	title = {Personality, Emotions and Physiology in a BDI Agent Architecture: The PEP -\&\#x226B; BDI Model},
+	year = {2009}
+}
+
+@unpublished{agentsBDI,
+	abstract = {Modeling and simulation have long been dominated by equation-based approaches, until the recent advent of agent-based approaches. To curb the increasing complexity of models resulting from this new approach, the trend has been to oversimplify the models. Some more descriptive models have still been developed for various phenomenons, but the cognition of agents is too often neglected, despite its great importance in some fields, such as Social and Human Sciences. The solution that we put forward in this paper is to use BDI agents. We will show that this is an expressive, realistic yet simple paradigm that thus offers numerous benefits to agent-based simulation.},
+	author = {Adam, Carole and Gaudou, Benoit and Hickmott, Sarah and Scerri, David},
+	title = {Agents BDI et simulations sociales}
+}
+
+@article{framework2015,
+	abstract = {Abstract There is an increasing need for autonomous systems that exhibit effective decision-making in unpredictable environments. However, the design of autonomous decision-making systems presents considerable challenges, particularly when they have to achieve their goals within a dynamic context. Tactics designed to handle unexpected environmental change, or attack by an adversary, must balance the need for reactivity with that of remaining focused on the system{\rq}s overall goal. The lack of a design methodology and supporting tools for representing tactics makes them difficult to understand, maintain and reuse. This is a significant problem in the design of tactical decision-making systems. We describe a methodology and accompanying tool, \{TDF\} (Tactics Development Framework), based on the \{BDI\} (Beliefs, Desires, Intentions) paradigm. \{TDF\} supports structural modelling of missions, goals, scenarios, input/output, messaging and procedures, and generates skeleton code that reflects the overall design. \{TDF\} has been evaluated through comparison with UML, indicating that it provides significant benefits to those building autonomous, tactical decision-making systems.},
+	author = {Evertsz, Rick and Thangarajah, John and Yadav, Nitin and Ly, Thanh},
+	issn = {0164-1212},
+	journal = {Journal of Systems and Software},
+	keywords = {Tactics modelling; Behaviour modelling; Multi-agent systems},
+	pages = {222--238},
+	title = {A framework for modelling tactical decision-making in autonomous systems},
+	volume = {110},
+	year = {2015}
+}
+
+@techreport{process2009,
+	author = {Kuligowski, Erica D.},
+	institution = {National Institute of Standards and Technology (U.S.)},
+	month = may,
+	publisher = {National Institute of Standards and Technology (U.S.)},
+	title = {The Process of Human Behavior in Fires},
+	volume = {NIST Technical Note 1632},
+	year = {2009}
+}
+
+@article{phoenix,
+	author = {Duff, Thomas J. and Chong, Derek M. and Tolhurst, Kevin G.},
+	journal = {Environmental Modelling and Software},
+	pages = {33--43},
+	title = {Quantifying spatio-temporal differences between fire shapes: Estimating fire travel paths for the improvement of dynamic spread models},
+	volume = {46},
+	year = {2013}
+}
+
+@techreport{review2014,
+	abstract = {Risk perception (RP) is studied in many research disciplines (e.g., safety engineering, psychology, and sociology), and the context in which RP is studied varies greatly. Definitions of RP can be broadly divided into expectancy-value and risk-as-feeling approaches. RP is seen as the personalization of the risk related to a current event, such as an ongoing fire emergency, and is influenced by emotions and prone to cognitive biases. The present article is a literature review that differentiates RP from other related concepts (e.g., situation awareness) and introduces theoretical frameworks (e.g., Protective Action Decision Model and Heuristic-Systematic approaches) relevant to RP in fire evacuation as distinct from other related fields of research Furthermore, this paper reviews studies on RP during evacuation, especially on the World Trade Center evacuation on September 11, 2001. It discusses factors modulating RP, as well as the relation between RP and protective actions. This paper concludes with a summary of the factors that influence risk perception and the direction of these relationships (i.e., positive or negative influence, or inconsequential), the limitations of this review, and an outlook on future research.},
+	author = {Kinateder, Max T. and Kuligowski, Erica D. and Reneke, Paul A. and Peacock, Richard D.},
+	institution = {National Institute of Standards and Technology},
+	keywords = {Egress; Evacuation; Evacuation modeling; Fire safety; Human behavior; Human factors; Risk perception},
+	month = sep,
+	note = {NIST Technical Note 1840},
+	title = {A Review of Risk Perception in Building Fire Evacuation},
+	year = {2014}
+}
+
+@inbook{prometheus2003,
+	address = {Berlin, Heidelberg},
+	author = {Padgham, Lin and Winikoff, Michael},
+	chapter = {Prometheus: A Methodology for Developing Intelligent Agents},
+	editor = {Giunchiglia, Fausto and Odell, James and Wei{\ss}, Gerhard},
+	isbn = {978-3-540-36540-2},
+	pages = {174--185},
+	publisher = {Springer Berlin Heidelberg},
+	title = {Agent-Oriented Software Engineering III: Third International Workshop},
+	year = {2003}
+}
+
+@inbook{bdi1999,
+	address = {Berlin, Heidelberg},
+	author = {Georgeff, Michael and Pell, Barney and Pollack, Martha and Tambe, Milind and Wooldridge, Michael},
+	chapter = {The Belief-Desire-Intention Model of Agency},
+	editor = {M\"{u}ller, J\"{o}rg P. and Rao, Anand S. and Singh, Munindar P.},
+	isbn = {978-3-540-49057-9},
+	pages = {1--10},
+	publisher = {Springer Berlin Heidelberg},
+	title = {Intelligent Agents V: Agents Theories, Architectures, and Languages: 5th International Workshop, ATAL'98 Paris, France, July 4--7, 1998 Proceedings},
+	year = {1999}
+}
+
+@inproceedings{capturing2003,
+	address = {New York, NY, USA},
+	author = {Norling, Emma},
+	booktitle = {Proceedings of the Second International Joint Conference on Autonomous Agents and Multiagent Systems},
+	isbn = {1-58113-683-8},
+	keywords = {BDI agents; human-like characters; user modelling},
+	location = {Melbourne, Australia},
+	pages = {1080--1081},
+	publisher = {ACM},
+	series = {AAMAS '03},
+	title = {Capturing the Quake Player: Using a BDI Agent to Model Human Behaviour},
+	year = {2003}
+}
+
+@inproceedings{bdi2010,
+	address = {Richland, SC},
+	author = {Criado, N. and Argente, E. and Botti, V.},
+	booktitle = {Proceedings of the 9th International Conference on Autonomous Agents and Multiagent Systems: Volume 1 - Volume 1},
+	isbn = {978-0-9826571-1-9},
+	keywords = {BDI agents; multi-context systems; norms; reasoning},
+	location = {Toronto, Canada},
+	pages = {1383--1384},
+	publisher = {International Foundation for Autonomous Agents and Multiagent Systems},
+	series = {AAMAS '10},
+	title = {A BDI Architecture for Normative Decision Making},
+	year = {2010}
+}
+
+@inproceedings{simple2015,
+	address = {Groningen, Netherlands},
+	author = {Caillou, Philippe and Gaudou, Benoit and Grignard, Arnaud and Truong, Chi Quang and Taillandier, Patrick},
+	booktitle = {{The Eleventh Conference of the European Social Simulation Association (ESSA 2015)}},
+	hal_id = {hal-01216165},
+	hal_version = {v1},
+	keywords = {Multi Agent Simulation and Modelling; BDI architecture},
+	month = sep,
+	pdf = {https://hal.inria.fr/hal-01216165/file/ESSA15-ACTEUR.pdf},
+	title = {{A Simple-to-use BDI architecture for Agent-based Modeling and Simulation}},
+	url = {https://hal.inria.fr/hal-01216165},
+	year = {2015}
+}
+
+@inproceedings{autonomous2004,
+	author = {Norling, E.},
+	booktitle = {Autonomous Agents and Multiagent Systems, 2004. AAMAS 2004. Proceedings of the Third International Joint Conference on},
+	keywords = {Computational modeling; Computer languages; Computer science; Computer simulation; Decision making; Humans; Knowledge representation; Psychology; Software engineering; Terminology},
+	month = {July},
+	pages = {202--209},
+	title = {Folk psychology for human modelling: extending the BDI paradigm},
+	year = {2004}
+}
+
+@misc{witness,
+	author = {VBRC},
+	howpublished = {\url{http://vol4.royalcommission.vic.gov.au/index82b9.html?pid=136}},
+	publisher = {Victoria Bushfires Royal Commission},
+	title = {Witness statement},
+	year = {2009}
+}
+
+@misc{tdfwebsite,
+	author = {TDF},
+	howpublished = {http://agentprojects.com/tdf/},
+	title = {{Tactics Development Framework}},
+	year = {2016}
+}
+
+@misc{exell,
+	author = {Exell, Sue},
+	howpublished = {\url{http://vol4.royalcommission.vic.gov.au/index03a1.html?pid=111}},
+	title = {Witness statement},
+	year = {2009}
+}
+
+@inproceedings{rhodes2014,
+	\url = {http://www.pacificdisaster.net/pdnadmin/data/original/AFAC14\_Why\_think.pdf},
+	author = {Rhodes, Alan},
+	booktitle = {{AFAC}},
+	organization = {Emergency Management Victoria},
+	title = {{Why don{\rq}t they do what we think they should?}},
+	year = {2014}
+}
+
+@misc{stats2009,
+	author = {VBRC},
+	booktitle = {{The fires and the fire-related deaths}},
+	chapter = {21},
+	howpublished = {http://www.royalcommission.vic.gov.au/Finaldocuments/volume-1/PF/VBRC\_Vol1\_Chapter21\_PF.pdf},
+	publisher = {Victorian Bushfires Royal Commission},
+	title = {{The Lessons Learnt}},
+	volume = {1},
+	year = {2009}
+}
+
+@inbook{adam2015,
+	author = {Adam, Carole and Beck, Elise and Dugdale, Julie},
+	chapter = {Modelling the Tactical Behaviour of the Australian Population in a Bushfire},
+	isbn = {978-3-319-24399-3},
+	pages = {53--64},
+	publisher = {Springer International Publishing},
+	title = {{Information Systems for Crisis Response and Management in Mediterranean Countries: Second International Conference, ISCRAM-med 2015, Tunis, Tunisia, October 28-30, 2015, Proceedings}},
+	year = {2015}
+}
+
+@inbook{Miller2015,
+	address = {Cham},
+	author = {Miller, Claire and Hilton, James and Sullivan, Andrew and Prakash, Mahesh},
+	booktitle = {{Environmental Software Systems. Infrastructures, Services and Applications: 11th IFIP WG 5.11 International Symposium, ISESS 2015, Melbourne, VIC, Australia, March 25-27, 2015. Proceedings}},
+	doi = {10.1007/978-3-319-15994-2_26},
+	editor = {Denzer, Ralf and Argent, Robert M. and Schimak, Gerald and H\v{r}eb\'{\i}\v{c}ek, Ji\v{r}\'{\i}},
+	isbn = {978-3-319-15994-2},
+	pages = {262--271},
+	publisher = {Springer International Publishing},
+	title = {{SPARK -- A Bushfire Spread Prediction Tool}},
+	url = {http://dx.doi.org/10.1007/978-3-319-15994-2_26},
+	year = {2015}
+}
+

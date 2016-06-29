@@ -1,10 +1,3 @@
-/**
-* Name: fire
-* Author: kustom
-* Description: 
-* Tags: Tag1, Tag2, TagN
-*/
-
 model fire
 
 import "world_cell.gaml"

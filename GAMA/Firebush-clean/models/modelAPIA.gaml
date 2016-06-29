@@ -78,7 +78,7 @@ global
 	float nb_escaping_D;
 	float nb_defending_D;
 
-	list<pedestrian> pedestrians; // -> {list(pedestrian)};
+	list<pedestrian> pedestrians;
 	
 	init
 	{
@@ -167,7 +167,8 @@ global
 			global_error <-
 			abs(17 - nb_defending_D/ nb_dead*100)+
 			abs(14 - nb_escaping_D/ nb_dead*100)+
-			abs(69 - nb_in_house_D/ nb_dead*100);}
+			abs(69 - nb_in_house_D/ nb_dead*100);
+		}
 		else {
 			global_error <-17.0 +14+69;
 		}

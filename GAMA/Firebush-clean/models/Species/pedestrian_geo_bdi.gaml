@@ -12,18 +12,17 @@ import "../modelAPIA.gaml"
 
 
 /***************************
- * PEDESTRIANS / RESIDENTS *
+ * PEDESTRIANS / RESIDENTS    *
  ***************************/
 
-species pedestrian_geo_bdi parent:pedestrian skills:[moving] control: simple_bdi schedules: (pedestrian_geo_bdi where not (each.is_dead or each.is_safe))
+species pedestrian_geo_bdi parent:pedestrian control: simple_bdi schedules: (pedestrian_geo_bdi where not (each.is_dead or each.is_safe))
 {
 
 	/*****************************
 	 * PSYCHOLOGICAL  ATTRIBUTES *
 	 *****************************/
 
-	bool knows_risks <- flip(0.5); // define if the agent knows the risk related to fires
-	bool knows_how_to_fight_fire <- flip(0.5); // define if the agent know how to fire a fire
+	bool knows_how_to_fight_fire <- flip(1.0); // define if the agent know how to fire a fire
 	bool listens_radio <- false; // define if the agent is listening radio
 	bool is_leaving <- false; // define if the agent is leaving to a shelter
 
@@ -84,7 +83,7 @@ species pedestrian_geo_bdi parent:pedestrian skills:[moving] control: simple_bdi
 	 * Get cover at home
 	 * If the house is not burned and if the agent is at home
 	 */
-	plan take_cover_at_home intention: stay_alive when: not self.myBuilding.destroyed and (self.location = self.myBuilding.location) and not is_dead finished_when: self.myBuilding.destroyed
+	plan take_cover_at_home intention: stay_alive when: (not self.myBuilding.destroyed and (self.location = self.myBuilding.location) and not is_dead and (danger_aversion>determination)) finished_when: self.myBuilding.destroyed
 	{
 		self.color <- #silver;
 		do remove_desire(protect_property); // loose all desires to defend its property
@@ -95,7 +94,7 @@ species pedestrian_geo_bdi parent:pedestrian skills:[moving] control: simple_bdi
 	/**
 	 * Seeks for informations about fire (futur work)
 	 */
-	plan seek_information intention: get_information when: not is_dead
+	plan seek_information intention: get_information when: not is_dead and not is_leaving
 	{
 		self.color <- #green;
 		listens_radio <- true;
@@ -115,11 +114,12 @@ species pedestrian_geo_bdi parent:pedestrian skills:[moving] control: simple_bdi
 	 */
 	plan fight_fire intention: protect_property
 		when: (
-			(
-				not empty(known_fires at_distance defense_radius) // there are known fire in the defense radius
-				and has_belief(belief_fire_position)) // And the agent has the believe about fire position 
+				(
+					not empty(known_fires at_distance defense_radius) // there are known fire in the defense radius
+					and has_belief(belief_fire_position)
+				) // And the agent has the believe about fire position 
 				or (self.my_cell.cover in [HOTSPOT_CELL,FIRE_CELL]) // Or It is in fire/hot area
-			) 
+			)
 			and not is_dead
 		finished_when: empty(known_fires at_distance defense_radius)
 	{
@@ -270,7 +270,9 @@ species pedestrian_geo_bdi parent:pedestrian skills:[moving] control: simple_bdi
 		draw circle(size) color: color border: border;
 	}
 
-	
+	/**
+	 * Initialisation of the agent
+	 */
 	init
 	{
 		self.speed <- velocity; // the speed correspond to its velocity

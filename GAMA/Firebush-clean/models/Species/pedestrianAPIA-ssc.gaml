@@ -1,4 +1,3 @@
-
 model pedestrianAPIA
 
 import "../modelAPIA.gaml"

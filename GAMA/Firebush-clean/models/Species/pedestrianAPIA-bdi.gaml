@@ -1,5 +1,5 @@
- 
 model pedestrianAPIA
+
 import "../modelAPIA.gaml"
 
 species pedestrianBDI parent: pedestrian control: simple_bdi schedules: (pedestrianBDI where not (each.is_dead or each.is_safe)){

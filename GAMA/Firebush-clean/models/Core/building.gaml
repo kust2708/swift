@@ -1,10 +1,3 @@
-/**
-* Name: building
-* Author: kustom
-* Description: 
-* Tags: Tag1, Tag2, TagN
-*/
-
 model building
 
 import "../modelAPIA.gaml"

@@ -1,18 +1,8 @@
-/**
-* Name: pedestrian
-* Author: kustom
-* Description: 
-* Tags: Tag1, Tag2, TagN
-*/
-
 model pedestrian
 
 import "../modelAPIA.gaml"
 
-/* Insert your model definition here */
-
 species pedestrian skills: [moving]{
-	
 	
 	bool did_preparation <- false;
 	bool did_preparation_stay <- false;
@@ -23,6 +13,7 @@ species pedestrian skills: [moving]{
 	bool in_the_house_D <- false;
 	bool escaping <- false;
 	bool fighting_fire <- false;
+	
 	/***********************
 	 * PHYSICAL ATTRIBUTES *
 	 ***********************/
@@ -48,11 +39,11 @@ species pedestrian skills: [moving]{
 	bool is_dead <- false; // define if  the agent is dead or still alive
 	bool in_smoke <- false; // define if the agent is in the in_smoke
 
-	float defend_motivation <- rnd(1.0);
-	float escape_motivation <- rnd(1.0);
-	float objective_ability <- rnd(1.0);
+	float defend_motivation min:0.0 max:1.0 <- 0.5 + rnd(0.5);
+	float escape_motivation min:0.0 max:1.0  <- 0.2 + rnd(0.8);
+	float objective_ability min:0.0 max:1.0  <- rnd(1.0);
 	float fighting_actions;
-	float awarness_probability <- rnd(0.1);	
+	float awarness_probability <- rnd(0.5);	
 	
 	float perception_radius min: 0.0 max: 20.0 <- rnd(20.0); // determine the perception radius
 	float defense_radius min: 0.0 <- rnd(2.0); // determine the area of defense, if a fire enter in this area the agent begin to fight agains.
@@ -93,6 +84,7 @@ species pedestrian skills: [moving]{
 		}
 		health <- min([health+preparationEffect,max_health]);
  	}
+ 	
  	action fight_fire {
  		fighting_fire <- true;
  		did_preparation <- true;

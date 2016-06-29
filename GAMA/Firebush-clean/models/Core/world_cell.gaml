@@ -1,10 +1,3 @@
-/**
-* Name: worldcell
-* Author: kustom
-* Description: 
-* Tags: Tag1, Tag2, TagN
-*/
-
 model worldcell
 
 import "../modelAPIA.gaml"

@@ -3,7 +3,7 @@ model pedestrian
 import "../modelAPIA.gaml"
 
 species pedestrian skills: [moving]{
-	
+
 	bool did_preparation <- false;
 	bool did_preparation_stay <- false;
 	bool took_by_surprise_D <- false;
@@ -13,7 +13,7 @@ species pedestrian skills: [moving]{
 	bool in_the_house_D <- false;
 	bool escaping <- false;
 	bool fighting_fire <- false;
-	
+
 	/***********************
 	 * PHYSICAL ATTRIBUTES *
 	 ***********************/
@@ -39,28 +39,28 @@ species pedestrian skills: [moving]{
 	bool is_dead <- false; // define if  the agent is dead or still alive
 	bool in_smoke <- false; // define if the agent is in the in_smoke
 
-	float defend_motivation min:0.0 max:1.0 <- 0.5 + rnd(0.5);
-	float escape_motivation min:0.0 max:1.0  <- 0.2 + rnd(0.8);
+	float defend_motivation min:0.0 max:1.0 <- rnd(1.0);
+	float escape_motivation min:0.0 max:1.0  <- rnd(1.0);
 	float objective_ability min:0.0 max:1.0  <- rnd(1.0);
 	float fighting_actions;
-	float awarness_probability <- rnd(0.5);	
-	
+	float awarness_probability <- rnd(0.5);
+
 	float perception_radius min: 0.0 max: 20.0 <- rnd(20.0); // determine the perception radius
 	float defense_radius min: 0.0 <- rnd(2.0); // determine the area of defense, if a fire enter in this area the agent begin to fight agains.
 	float danger_radius min: 0.0 max: 10.0 <- rnd(10.0); // determine the danger radius
 	float velocity min:0.2 max:8.0 <- rnd(0.8)+0.2; // get an equiprobable value in the interval [0.2; 1.0]
 
 	list<fire> known_fires update:known_fires where (not dead(each) and (each.intensity >0));
-		
-	list<shelter> known_shelters; // list of known shelters 
+
+	list<shelter> known_shelters; // list of known shelters
 	int cyclesInDefense;
-	
+
 	list<world_cell> cells_hot update: (world_cell(location) neighbors_at people_defense_radius)where (each.cover=HOTSPOT_CELL);
 	world_cell closest_hot_cell <- nil update: empty(cells_hot) ? nil: cells_hot with_min_of (each.location distance_to location);
 	int distance_closest_hot update: (closest_hot_cell=nil)?1000:int(self distance_to closest_hot_cell);
-	
+
 	shelter closest_shelter; // closest shelter from the agent position
-	
+
 	init
 	{
 		self.speed <- velocity;
@@ -72,11 +72,11 @@ species pedestrian skills: [moving]{
 			}
 		}
 	}
-	
+
 	action prepare_for_fire {
 		did_preparation <- true;
 		did_preparation_stay <- true;
-		fighting_fire <- true;	
+		fighting_fire <- true;
 		unaware <- false;
 		int preparationEffect <- int(rnd(people_preparation_factor*objective_ability));
  		ask myBuilding {
@@ -84,25 +84,25 @@ species pedestrian skills: [moving]{
 		}
 		health <- min([health+preparationEffect,max_health]);
  	}
- 	
+
  	action fight_fire {
  		fighting_fire <- true;
  		did_preparation <- true;
-		did_preparation_stay <- true;	
+		did_preparation_stay <- true;
 		unaware <- false;
  		int fightingEffect <- int(rnd(people_fighting_factor*objective_ability));
 		ask fire at_distance (people_defense_radius) {
 			intensity <- intensity - fightingEffect;
 			shape <- circle(intensity);
 			myself.fighting_actions <- myself.fighting_actions + fightingEffect;
-			
+
 		}
 		cyclesInDefense <- cyclesInDefense +1;
 	}
-	
+
 	action moving {
 		unaware <- false;
-		did_preparation <- true;	
+		did_preparation <- true;
 		escaping <- true;
 		fighting_fire <- false;
 		in_smoke <-(self.my_cell.cover in [HOTSPOT_CELL,FIRE_CELL]);
@@ -130,7 +130,7 @@ species pedestrian skills: [moving]{
 				float direction <-  mean (close_fires collect float(self towards each)) - 180;
 				do move heading:direction;
 			}
-			if (location = prev_loc) 
+			if (location = prev_loc)
 			{
 				do wander amplitude: 45;
 			}
@@ -138,15 +138,15 @@ species pedestrian skills: [moving]{
 
 		self.color <- (stuck and not self.myBuilding.destroyed and location = myBuilding.location) ? #silver : #aqua;
 	}
-	
-	reflex update_speed 
+
+	reflex update_speed
 	{
 		// the agent's speed is proportional to his health
 		self.speed <- ((health*velocity)/initial_health);
 		// reduce the speed when the agent is in smokes (20%)
 		self.speed <- ((in_smoke) ? self.speed-0.2*self.speed : self.speed);
 	}
-	
+
 	reflex update_motiv_fight {
  		if (myBuilding.resistance = 0) {
  			defend_motivation <- 0.0;
@@ -157,13 +157,13 @@ species pedestrian skills: [moving]{
  		else {
  			float injury_per_cycle <- injuries/cyclesInDefense;
  			float cycles_before_death <- (injury_per_cycle>0)?health/injury_per_cycle:1000000;
- 			
+
  			float damage_per_cycle <- myBuilding.damage / cyclesInDefense;
  			float cycles_before_destroyed <- (damage_per_cycle>0)?myBuilding.resistance/damage_per_cycle:1000000;
- 			
+
  			float water_per_cycle <- fighting_actions/cyclesInDefense;
  			float cycles_before_extinction <- (water_per_cycle>0)?sum((known_fires where !dead(each)) collect each.intensity)/water_per_cycle:1000000;
- 			
+
  			if (min([cycles_before_death,cycles_before_destroyed]) < cycles_before_extinction) {
  				defend_motivation <- defend_motivation * (1-motivation_update_rate);
  			}
@@ -172,7 +172,7 @@ species pedestrian skills: [moving]{
  			}
 		}
  	}
- 	
+
 
 	reflex death when: health<= 0 {
 		rgb mem <- self.color;
@@ -181,15 +181,15 @@ species pedestrian skills: [moving]{
 		self.is_dead <- true;
 		numberDead <- numberDead+1;
 		escaping_D <- escaping;
-		
+
 		in_the_house_D <- self.location = myBuilding.location and not fighting_fire and not escaping;
 		took_by_surprise_D <- unaware;
 	}
-	
+
 	aspect basic
 	{
 		draw circle(size) color: color border: border;
 	}
-	
-	
+
+
 }
